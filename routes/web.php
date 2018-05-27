@@ -33,3 +33,5 @@ Route::get('welcome', function() {
 
 Route::get('hello', 'HelloController@index');
 Route::get('hello/other', 'HelloController@other');
+
+Route::get('single', 'SingleHelloController');
