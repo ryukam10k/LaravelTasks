@@ -31,4 +31,5 @@ Route::get('welcome', function() {
 	return view('welcome');
 });
 
-Route::get('hello/{id?}/{pass?}', 'HelloController@index');
+Route::get('hello', 'HelloController@index');
+Route::get('hello/other', 'HelloController@other');
