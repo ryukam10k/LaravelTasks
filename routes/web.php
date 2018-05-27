@@ -31,24 +31,4 @@ Route::get('welcome', function() {
 	return view('welcome');
 });
 
-Route::get('hello/{msg?}/{msg2?}', function ($msg='hoge1', $msg2='hoge2') {
-$html = <<<EOF
-<html>
-<head>
-<title>Hellp</title>
-<style>
-body {font-size:16pt; color:#999; }
-h1 {font-size:100pt; text-align:right; color:#eee; margin:-40px 0px -50px 0px; }
-</style>
-</head>
-<body>
-	<h1>Hello</h1>
-	<p>{$msg}</p>
-	<p>{$msg2}</p>
-	<p>This is Sample Page</p>
-</body>
-</html>
-
-EOF;
-	return $html;
-});
+Route::get('hello', 'HelloController@index');
