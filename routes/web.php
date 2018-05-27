@@ -26,3 +26,7 @@ Route::post('/task', function() {
 	]);
 	return redirect("/");
 });
+
+Route::get('welcome', function() {
+	return view('welcome');
+});
