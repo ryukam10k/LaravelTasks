@@ -31,7 +31,7 @@ Route::get('welcome', function() {
 	return view('welcome');
 });
 
-Route::get('hello/{msg}/{msg2}', function ($msg, $msg2) {
+Route::get('hello/{msg?}/{msg2?}', function ($msg='hoge1', $msg2='hoge2') {
 $html = <<<EOF
 <html>
 <head>
