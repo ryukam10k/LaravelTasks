@@ -32,5 +32,6 @@ Route::get('welcome', function() {
 });
 
 Route::get('hello', 'HelloController@index');
+Route::post('hello', 'HelloController@post');
 
 Route::get('single', 'SingleHelloController');
