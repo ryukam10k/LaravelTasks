@@ -21,7 +21,6 @@
     @endif
     <table>
         <form action="/hello" method="post">
-            {{ csrf_field() }}
             <tr>
                 <th>name: </th>
                 <td><input type="text" name="name" value="{{old('name')}}"></td>
