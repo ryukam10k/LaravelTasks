@@ -13,12 +13,17 @@ use App\Http\Middleware\HelloMiddleware;
 |
 */
 
+Route::get('/', function() {
+	return view('welcome');
+});
+/*
 Route::get('/', function () {
 	$tasks = \DB::table("tasks")->get();
 		return view('index', [
 			"tasks" => $tasks
 		]);
 });
+*/
 
 Route::post('/task', function() {
 	// TODO DBにデータを投入
