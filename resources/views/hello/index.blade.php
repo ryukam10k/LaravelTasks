@@ -8,6 +8,7 @@
 @endsection
 
 @section('content')
+    <div><a href="/hello/add">add item</a></div>
     <table>
         <tr><th>Name</th><th>Mail</th><th>Age</th><th></th></tr>
         @foreach ($items as $item)
