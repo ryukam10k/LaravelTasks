@@ -21,7 +21,10 @@
             <td>{{$item->name}}</td>
             <td>{{$item->mail}}</td>
             <td>{{$item->age}}</td>
-            <td><a href="/hello/edit?id={{$item->id}}">edit</a></td>
+            <td>
+                <a href="/hello/edit?id={{$item->id}}">edit</a> | 
+                <a href="/hello/del?id={{$item->id}}">del</a>
+            </td>
         </tr>
         @endforeach
     </table>
