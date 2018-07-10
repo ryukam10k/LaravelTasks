@@ -39,6 +39,10 @@ Route::get('welcome', function() {
 	return view('welcome');
 });
 
+Route::get('hellovue', function() {
+	return view('helloVue');
+});
+
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
 
