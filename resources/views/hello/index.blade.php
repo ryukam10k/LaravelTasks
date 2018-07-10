@@ -22,6 +22,7 @@
             <td>{{$item->mail}}</td>
             <td>{{$item->age}}</td>
             <td>
+                <a href="/hello/show?id={{$item->id}}">show</a> | 
                 <a href="/hello/edit?id={{$item->id}}">edit</a> | 
                 <a href="/hello/del?id={{$item->id}}">del</a>
             </td>
