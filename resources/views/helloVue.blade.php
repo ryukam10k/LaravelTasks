@@ -12,7 +12,7 @@
 <body>
 <h1>Vue.jsのサンプル</h1>
 <div id="app">
-    <example></example>
+    <example-component></example-component>
 </div>
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
