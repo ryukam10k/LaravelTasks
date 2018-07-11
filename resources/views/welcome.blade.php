@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel!!!
+                    Laravel
                 </div>
 
                 <div class="links">
@@ -88,6 +88,12 @@
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+                </div>
+
+                <div class="links">
+                    <a href="/hello">hello</a>
+                    <a href="/hellovue">helloVue.js</a>
+                    <a href="/task">task</a>
                 </div>
             </div>
         </div>
