@@ -43,6 +43,9 @@ Route::get('hellovue', function() {
 	return view('helloVue');
 });
 
+Route::get('single', 'SingleHelloController');
+
+/* Hello */
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
 
@@ -58,4 +61,5 @@ Route::post('hello/del', 'HelloController@remove');
 Route::get('hello/show', 'HelloController@show');
 Route::get('hello/show2', 'HelloController@show2');
 
-Route::get('single', 'SingleHelloController');
+/* Person */
+Route::get('person', 'PersonController@index');
