@@ -11,12 +11,18 @@
     <div><a href="/person/add">Add</a></div>
     <table>
         <tr>
-            <th>Data</th>
+            <th>Person</th>
+            <th>Board</th>
             <th></th>
         </tr>
         @foreach ($items as $item)
         <tr>
             <td>{{$item->getData()}}</td>
+            <td>
+            @if ($item->board != null)
+                {{$item->board->getData()}}
+            @endif
+            </td>
             <td>
                 <a href="/person/edit?id={{$item->id}}">edit | </a>
                 <a href="/person/del?id={{$item->id}}">del</a>
