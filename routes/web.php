@@ -61,6 +61,8 @@ Route::post('hello/del', 'HelloController@remove');
 Route::get('hello/show', 'HelloController@show');
 Route::get('hello/show2', 'HelloController@show2');
 
+Route::get('hello/rest', 'HelloController@rest');
+
 /* Person */
 Route::get('person', 'PersonController@index');
 

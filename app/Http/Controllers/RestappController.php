@@ -40,7 +40,7 @@ class RestappController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $restdata->fill($form)->save();
-        return redirec('/rest');
+        return redirect('/rest');
     }
 
     /**
