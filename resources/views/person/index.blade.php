@@ -19,8 +19,12 @@
         <tr>
             <td>{{$item->getData()}}</td>
             <td>
-            @if ($item->board != null)
-                {{$item->board->getData()}}
+            @if ($item->boards != null)
+                <table widht="100%">
+                @foreach ($item->boards as $obj)
+                    <tr><td>{{$obj->getData()}}</td></tr>
+                @endforeach
+                </table>
             @endif
             </td>
             <td>
@@ -30,6 +34,7 @@
         </tr>
         @endforeach
     </table>
+    <div><a href="/board">go to board</a></div>
 @endsection
 
 @section('footer')
