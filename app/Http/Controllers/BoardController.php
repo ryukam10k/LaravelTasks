@@ -9,7 +9,9 @@ class BoardController extends Controller
 {
     public function index(Request $request)
     {
-        $items = Board::all();
+        //$items = Board::all();
+        // all()だとN+1問題でDBアクセスが発生して遅くなる。withの方が早い。
+        $items = Board::with('person')->get();
         return view('board.index', ['items' => $items]);
     }
 
