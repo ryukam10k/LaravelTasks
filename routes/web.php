@@ -63,6 +63,9 @@ Route::get('hello/show2', 'HelloController@show2');
 
 Route::get('hello/rest', 'HelloController@rest');
 
+Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
+
 /* Person */
 Route::get('person', 'PersonController@index');
 
