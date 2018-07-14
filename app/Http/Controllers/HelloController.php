@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use Illuminate\SUpport\Facades\Auth;
 use App\Http\Requests\HelloRequest;
 use Validator;
 use App\Person;
 
+
 class HelloController extends Controller
 {
     public function index(Request $request) {
+        $user = Auth::user();
+
         $sort = $request->sort;
         if (isset($request->id))
         {
@@ -24,7 +28,8 @@ class HelloController extends Controller
             $items = Person::orderBy($sort, 'asc')
                 ->paginate(5);
         }
-        return view('hello.index', ['items'=> $items, 'sort' => $sort]);
+        $param = ['items'=> $items, 'sort' => $sort, 'user' => $user];
+        return view('hello.index', $param);
     }
 
     public function post(Request $request) {
