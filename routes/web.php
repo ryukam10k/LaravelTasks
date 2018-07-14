@@ -46,7 +46,7 @@ Route::get('hellovue', function() {
 Route::get('single', 'SingleHelloController');
 
 /* Hello */
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')->middleware('auth');
 Route::post('hello', 'HelloController@post');
 
 Route::get('hello/add', 'HelloController@add');
