@@ -22,7 +22,7 @@ class HelloController extends Controller
             //$items = DB::table('people')
             //    ->orderBy('age', 'asc')
             $items = Person::orderBy($sort, 'asc')
-                ->simplePaginate(5);
+                ->paginate(5);
         }
         return view('hello.index', ['items'=> $items, 'sort' => $sort]);
     }
