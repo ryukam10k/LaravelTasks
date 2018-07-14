@@ -19,7 +19,7 @@ class HelloController extends Controller
             //$items = DB::select('select * from people');
             $items = DB::table('people')
                 ->orderBy('age', 'asc')
-                ->get();
+                ->simplePaginate(5);
         }
         return view('hello.index', ['items'=> $items ]);
     }
