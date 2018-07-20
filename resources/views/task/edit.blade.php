@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Task') }}</div>
+                <div class="card-header">{{ __('Task - Edit') }}</div>
 
                 <div class="card-body">
 
@@ -19,16 +19,17 @@
                     </div>
                     @endif
                     
-                    <form action="/task/add" method="post">
+                    <form action="/task/edit" method="post">
                         {{ csrf_field() }}
+                        <input type="hidden" name="id" value="{{$form->id}}">
                         <table class="table">
                             <tr>
                                 <th>title: </th>
-                                <td><input type="text" name="title" value="{{old('title')}}"></td>
+                                <td><input type="text" name="title" value="{{$form->title}}"></td>
                             </tr>
                             <tr>
                                 <th>content: </th>
-                                <td><input type="text" name="content" value="{{old('content')}}"></td>
+                                <td><input type="text" name="content" value="{{$form->content}}"></td>
                             </tr>
                             <tr>
                                 <th></th>
@@ -37,7 +38,6 @@
                         </table>
                     </form>
                     
-
                 </div>
             </div>
         </div>

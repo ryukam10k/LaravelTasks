@@ -101,3 +101,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('task', 'TaskController@index');
 Route::get('task/add', 'TaskController@add');
 Route::post('task/add', 'TaskController@create');
+Route::get('task/edit', 'TaskController@edit');
+Route::post('task/edit', 'TaskController@update');
