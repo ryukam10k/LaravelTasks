@@ -28,6 +28,12 @@ class TaskController extends Controller
         return redirect('/task');
     }
 
+    public function show(Request $request)
+    {
+        $task = Task::find($request->id);
+        return view('task.show', ['form' => $task]);
+    }
+
     public function edit(Request $request)
     {
         $task = Task::find($request->id);
