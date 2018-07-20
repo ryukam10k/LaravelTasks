@@ -104,3 +104,5 @@ Route::post('task/add', 'TaskController@create');
 Route::get('task/show', 'TaskController@show');
 Route::get('task/edit', 'TaskController@edit');
 Route::post('task/edit', 'TaskController@update');
+Route::get('task/del', 'TaskController@delete');
+Route::post('task/del', 'TaskController@remove');
